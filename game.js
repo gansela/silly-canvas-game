@@ -43,6 +43,10 @@ function animate() {
         }, 1000);
     })
     shoot(player)
+    if (!enemies[0]) {
+        alert("you win") 
+        stopAnimate = true
+    }
 }
 
 

@@ -23,8 +23,8 @@ class Kikele {
         }
         limit(this.dx)
         limit(this.dy)
-        // frictionX(this)
-        // frictionY(this)
+        frictionX(this)
+        frictionY(this)
     }
     move() {
         document.onkeydown = function (e) {
@@ -72,10 +72,10 @@ class Kikele {
         else this.dx--
         if(this.y < player.y) this.dy++
         else this.dy--
-        if (Math.abs(this.dx) > 5 || Math.abs(this.dy) > 5) {
-            this.dx = 0
-            this.dy = 0
-        }
+        if (this.dx > 2) this.dx = 2;
+        if (this.dx < -2) this.dx = -2;
+        if (this.dy > 2) this.dy = 2;
+        if (this.dy < -2) this.dy = -2
     }
 
 }
